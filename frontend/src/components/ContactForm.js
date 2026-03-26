@@ -14,7 +14,7 @@ function ContactForm() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    await axios.post("http://localhost:1812/api/contacts", form);
+    await axios.post("https://contact-app-vulu.onrender.com/api/contacts", form);
     window.location.reload();
   };
 
