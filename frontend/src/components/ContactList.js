@@ -5,7 +5,7 @@ function ContactList() {
   const [contacts, setContacts] = useState([]);
 
   const fetchContacts = async () => {
-    const res = await axios.get("http://localhost:1812/api/contacts");
+    const res = await axios.get("https://contact-app-vulu.onrender.com/api/contacts");
     setContacts(res.data);
   };
 
@@ -14,7 +14,7 @@ function ContactList() {
   }, []);
 
   const deleteContact = async (id) => {
-    await axios.delete(`http://localhost:1812/api/contacts/${id}`);
+    await axios.delete(`https://contact-app-vulu.onrender.com/api/contacts/${id}`);
     fetchContacts();
   };
 
